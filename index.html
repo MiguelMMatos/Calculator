@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <section id="calculator" class="flex flex-column flex-center container-fullHeight">
+        <div class="splitter-title">
+            SPLI
+            <p></p>TTER
+        </div>
+        <div class="calculator flex justify-spaceB">
+            <div id="leftPanel" class="flex flex-column justify-spaceB flex-grow-1">
+                <div class="container--bill">
+                    <div class="text-padding ">Bill</div>
+                    <label class="bill">
+                      $
+                    </label>
+                    <input type="text" id="currentBill" class="input--focus input--custom" id="bill" style="--width: 100%; --padding: 10px; ">
+                </div>
+                <div id="selectTip ">
+                    <div class="text-padding ">Select Tip %</div>
+                    <div class="grid grid-custom tipButtons ">
+                        <button data-percentage="5" class="tipButton">5%</button>
+                        <button data-percentage="10" class="tipButton">10%</button>
+                        <button data-percentage="15" class="tipButton">15%</button>
+                        <button data-percentage="25" class="tipButton">25%</button>
+                        <button data-percentage="50" class="tipButton">50%</button>
+                        <input type="text" id="currentTip" class="input--focus input--custom " placeholder="Custom " style="--margin: 0.3rem; --padding: 5px; "></input>
+                    </div>
+                </div>
+                <div class="container--bill ">
+                    <div class="flex flex-center justify-spaceB text-padding ">
+                        <div class="custom-font-size " style="--fontSize:16px; ">Number of People</div>
+                        <div id="error-text" class="error-text">Can`t be zero</div>
+                    </div>
+                    <label class="bill ">
+                      $
+                    </label>
+                    <input type="text" id="currentNumberPeople" class="input--focus input--custom " id="bill " style="--width: 100%; --padding: 10px; ">
+                </div>
+            </div>
+
+            <div id="rightPanel " class="rightPanel flex-grow-1 flex flex-column flex-center justify-spaceA ">
+                <div id="Amounts " class="amounts-container flex flex-column ">
+                    <div class="flex flex-center justify-spaceB ">
+                        <h3 class="custom-font-size custom-color " style="--fontSize:0.8rem; --color: var(--white); ">
+                            Tip Amount
+                            <p class="custom-font-size custom-color " style="--fontSize:0.7rem; --color: var(--light-grayish-cyan); ">
+                                /person
+                            </p>
+                        </h3>
+                        <div id="tipAmount" class="amount-text flex flex-center "><span>$</span>0.00</div>
+                    </div>
+                    <div class="flex flex-center justify-spaceB ">
+                        <h3 class="custom-font-size custom-color " style="--fontSize:0.8rem; --color: var(--white); ">
+                            Total
+                            <p class="custom-font-size custom-color " style="--fontSize:0.7rem; --color: var(--light-grayish-cyan); ">
+                                /person
+                            </p>
+                        </h3>
+                        <div id="totalPerPerson" class="amount-text flex flex-center "><span>$</span>0.00</div>
+                    </div>
+                </div>
+                <button class="buttonReset">RESET</button>
+            </div>
+        </div>
+        <div class="attribution ">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge " target="_blank ">Frontend Mentor</a>. Coded by <a href="# ">Your Name Here</a>.
+        </div>
+    </section>
+
+    <script type="text/javascript " src="calculate.js "></script>
+</body>
+
+</html>
